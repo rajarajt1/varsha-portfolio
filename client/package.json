@@ -2,6 +2,7 @@
   "name": "varsha-portfolio-client",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://rajarajt1.github.io/varsha-portfolio",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
