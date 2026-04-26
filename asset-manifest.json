@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/varsha-portfolio/static/css/main.48ea3887.css",
+    "main.js": "/varsha-portfolio/static/js/main.085bb70c.js",
+    "index.html": "/varsha-portfolio/index.html",
+    "main.48ea3887.css.map": "/varsha-portfolio/static/css/main.48ea3887.css.map",
+    "main.085bb70c.js.map": "/varsha-portfolio/static/js/main.085bb70c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48ea3887.css",
+    "static/js/main.085bb70c.js"
+  ]
+}
