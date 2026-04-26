@@ -1,0 +1,226 @@
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 45%, #fce7f3 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 120px 5% 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  flex: 1;
+}
+
+.hero-text {
+  flex: 1.1;
+}
+
+.hero-name {
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.hero-name span {
+  color: var(--primary);
+}
+
+.hero-role {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(46, 196, 182, 0.12);
+  color: #1a9e94;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 50px;
+  margin-bottom: 1.4rem;
+  border: 1px solid rgba(46, 196, 182, 0.25);
+}
+
+.hero-desc {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-actions .btn-primary,
+.hero-actions .btn-outline {
+  display: flex;
+  align-items: center;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(108, 99, 255, 0.1);
+  width: fit-content;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-num {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.stat-lbl {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 3px;
+  white-space: nowrap;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+}
+
+/* Visual side */
+.hero-visual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+}
+
+.hero-avatar {
+  position: relative;
+}
+
+.avatar-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+  box-shadow: 0 25px 60px var(--shadow);
+  position: relative;
+  z-index: 2;
+}
+
+.avatar-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed rgba(108, 99, 255, 0.25);
+  animation: spin 15s linear infinite;
+}
+
+.ring-1 {
+  width: 360px;
+  height: 360px;
+}
+
+.ring-2 {
+  width: 430px;
+  height: 430px;
+  animation-direction: reverse;
+  animation-duration: 20s;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.floating-badge {
+  position: absolute;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  animation: floatBadge 3s ease-in-out infinite;
+  z-index: 3;
+}
+
+.badge-1 { top: 5%; right: 0; animation-delay: 0s; }
+.badge-2 { top: 35%; left: -10%; animation-delay: 0.8s; }
+.badge-3 { bottom: 20%; right: -5%; animation-delay: 1.6s; }
+.badge-4 { bottom: 5%; left: 5%; animation-delay: 2.4s; }
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-wave {
+  margin-top: auto;
+}
+
+.hero-wave svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-name { font-size: 2.6rem; }
+  .hero-desc { margin: 0 auto 2rem; }
+  .hero-actions { justify-content: center; }
+  .hero-stats { justify-content: center; margin: 0 auto; }
+  .hero-badge { justify-content: center; }
+  .avatar-circle { width: 240px; height: 240px; font-size: 5.5rem; }
+  .ring-1 { width: 290px; height: 290px; }
+  .ring-2 { width: 350px; height: 350px; }
+  .hero-visual { min-height: 340px; }
+}

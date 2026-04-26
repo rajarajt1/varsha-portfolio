@@ -1,0 +1,149 @@
+.services-page {
+  padding-top: 80px;
+}
+
+.services-hero {
+  padding: 80px 5% 60px;
+  background: linear-gradient(135deg, #f5f3ff, #ede9fe 50%, #fce7f3);
+  text-align: center;
+}
+
+.services-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-detail {
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.services-detail-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.service-detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.service-detail-card.reverse {
+  grid-template-columns: 1.8fr 1fr;
+}
+
+.service-detail-card.reverse .sd-visual {
+  order: 2;
+}
+
+.service-detail-card.reverse .sd-text {
+  order: 1;
+}
+
+.sd-visual {
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+
+.sd-icon {
+  font-size: 5rem;
+}
+
+.sd-text h3 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+
+.sd-text p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  font-size: 0.97rem;
+}
+
+.sd-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sd-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.92rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.sd-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* CTA */
+.services-cta-section {
+  padding: 80px 5%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  text-align: center;
+  color: #fff;
+}
+
+.services-cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-cta-inner h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.services-cta-inner p {
+  opacity: 0.85;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.services-cta-inner .btn-primary {
+  background: #fff;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+}
+
+.services-cta-inner .btn-primary:hover {
+  background: #f0eeff;
+}
+
+@media (max-width: 900px) {
+  .service-detail-card,
+  .service-detail-card.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-card.reverse .sd-visual,
+  .service-detail-card.reverse .sd-text {
+    order: unset;
+  }
+
+  .sd-visual {
+    height: 160px;
+  }
+}

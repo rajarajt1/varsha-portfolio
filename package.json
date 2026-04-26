@@ -1,0 +1,25 @@
+{
+  "name": "varsha-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio project showcasing skills and projects.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "client": "npm start --prefix client",
+    "server": "nodemon server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "concurrently": "^5.3.0"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC"
+}
